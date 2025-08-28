@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Upload, Files, Wallet, User, HardDrive, Coins, Activity, Plus } from "lucide-react";
+import { DashboardNavbar } from "@/components/DashboardNavbar";
 
 export default function Dashboard() {
   const stats = [
@@ -75,7 +76,9 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="min-h-screen bg-background p-6">
+    <div className="min-h-screen bg-background">
+      <DashboardNavbar />
+      <div className="p-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
@@ -166,6 +169,7 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

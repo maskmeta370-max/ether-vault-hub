@@ -8,6 +8,7 @@ import { Progress } from "@/components/ui/progress";
 import { Upload, File, Lock, Unlock, X, Check } from "lucide-react";
 import { useState, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { DashboardNavbar } from "@/components/DashboardNavbar";
 
 export default function UploadPage() {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -106,7 +107,9 @@ export default function UploadPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background p-6">
+    <div className="min-h-screen bg-background">
+      <DashboardNavbar />
+      <div className="p-6">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">Upload Files</h1>
@@ -286,6 +289,7 @@ export default function UploadPage() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
