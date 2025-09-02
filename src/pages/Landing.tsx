@@ -66,7 +66,7 @@ export default function Landing() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild className="text-lg px-8 py-4 h-14">
-                <Link to="/register">Start Storing Securely</Link>
+                <Link to="/auth">Start Storing Securely</Link>
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 h-14">
                 <Link to="#features">Learn More</Link>
@@ -115,7 +115,7 @@ export default function Landing() {
               Join thousands of users who have already made the switch to decentralized storage.
             </p>
             <Button variant="hero" size="lg" asChild className="text-lg px-8 py-4 h-14">
-              <Link to="/register">Get Started Free</Link>
+              <Link to="/auth">Get Started Free</Link>
             </Button>
           </div>
         </div>

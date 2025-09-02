@@ -14,7 +14,96 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      files: {
+        Row: {
+          created_at: string
+          download_count: number | null
+          earnings_amount: number | null
+          file_size: number
+          file_type: string
+          id: string
+          ipfs_hash: string | null
+          is_public: boolean | null
+          name: string
+          original_name: string
+          password_hash: string | null
+          password_protected: boolean | null
+          updated_at: string
+          upload_status: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          download_count?: number | null
+          earnings_amount?: number | null
+          file_size: number
+          file_type: string
+          id?: string
+          ipfs_hash?: string | null
+          is_public?: boolean | null
+          name: string
+          original_name: string
+          password_hash?: string | null
+          password_protected?: boolean | null
+          updated_at?: string
+          upload_status?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          download_count?: number | null
+          earnings_amount?: number | null
+          file_size?: number
+          file_type?: string
+          id?: string
+          ipfs_hash?: string | null
+          is_public?: boolean | null
+          name?: string
+          original_name?: string
+          password_hash?: string | null
+          password_protected?: boolean | null
+          updated_at?: string
+          upload_status?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          display_name: string | null
+          email: string | null
+          id: string
+          token_balance: number | null
+          total_storage_used: number | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          email?: string | null
+          id?: string
+          token_balance?: number | null
+          total_storage_used?: number | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          email?: string | null
+          id?: string
+          token_balance?: number | null
+          total_storage_used?: number | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
